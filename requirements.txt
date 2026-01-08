@@ -1,0 +1,45 @@
+# Core ML/AI Frameworks
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+transformers>=4.37.0
+accelerate>=0.20.0
+
+# Computer Vision
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Scientific Computing
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Speech Recognition and Audio
+openai-whisper>=20231117
+soundfile>=0.12.1
+pyaudio>=0.2.13
+webrtcvad>=2.0.10
+
+# Text-to-Speech
+pyttsx3>=2.90
+
+# LLM Integration
+ollama>=0.3.0
+openai>=1.0.0
+requests>=2.31.0
+
+# Web and API
+gradio>=4.0.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# ONNX Runtime (GPU)
+onnxruntime-gpu>=1.16.0
+
+# Optional: For advanced features
+# scikit-learn>=1.3.0
+# timm>=0.9.0  # Torch Image Models
+# diffusers>=0.27.0

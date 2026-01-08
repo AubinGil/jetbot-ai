@@ -1,0 +1,17 @@
+teleop_twist_joy:
+  ros__parameters:
+    enable_button: 5           # RB on Xbox / R1 on many gamepads
+    enable_turbo_button: 4     # LB / L1 for turbo
+    axis_linear: 1             # Left stick vertical
+    scale_linear: 0.4          # m/s normal
+    scale_linear_turbo: 0.8    # m/s turbo
+    axis_angular: 0            # Left stick horizontal
+    scale_angular: 1.2         # rad/s normal
+    scale_angular_turbo: 2.0   # rad/s turbo
+
+joy_node:
+  ros__parameters:
+    device_id: 0               # /dev/input/js0
+    deadzone: 0.05
+    autorepeat_rate: 20.0
+

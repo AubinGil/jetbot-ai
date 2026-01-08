@@ -1,0 +1,8 @@
+# Service to trigger specific animations
+# Valid animations: blink, laugh, confused
+
+string animation_name
+int32 duration  # Duration in frames (60 fps), 0 for default
+---
+bool success
+string message

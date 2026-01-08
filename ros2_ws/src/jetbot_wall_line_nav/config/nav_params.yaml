@@ -1,0 +1,42 @@
+# Wall & Line Navigation Parameters
+
+wall_line_navigator:
+  ros__parameters:
+    # Feature enables
+    enable_line_following: true
+    enable_wall_detection: true
+
+    # Wall detection parameters
+    min_wall_distance: 40  # pixels from image edge to consider as wall warning
+
+    # Speed limits
+    max_linear_speed: 0.25   # m/s - adjust based on your robot
+    max_angular_speed: 0.8   # rad/s - adjust based on your robot
+
+    # Line following parameters (adjust based on your line color)
+    # HSV color range for yellow line:
+    line_color_lower_h: 20
+    line_color_lower_s: 100
+    line_color_lower_v: 100
+    line_color_upper_h: 30
+    line_color_upper_s: 255
+    line_color_upper_v: 255
+
+    # For white line, use:
+    # line_color_lower_h: 0
+    # line_color_lower_s: 0
+    # line_color_lower_v: 200
+    # line_color_upper_h: 180
+    # line_color_upper_s: 30
+    # line_color_upper_v: 255
+
+    # Control parameters
+    line_follow_kp: 1.0      # Proportional gain for line following
+    min_line_area: 100       # Minimum contour area to consider as line
+    roi_bottom_fraction: 0.6 # Fraction of image height to use for line detection
+
+    # Wall detection thresholds
+    wall_edge_threshold: 0.1  # Edge density threshold for wall detection
+
+    # Debug
+    publish_debug_image: true

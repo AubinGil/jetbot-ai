@@ -1,0 +1,75 @@
+# Configuration for Conversation Pipeline
+
+conversation_node:
+  ros__parameters:
+    # Primary settings (Cosmos Reason 8B - OpenAI-compatible API)
+    primary_ollama_host: 'http://192.168.2.16:8000'           # Cosmos server
+    primary_ollama_model: 'nvidia/Cosmos-Reason2-8B'          # Cosmos text & reasoning
+    primary_ollama_vision_model: 'nvidia/Cosmos-Reason2-8B'   # Cosmos vision
+    primary_api_type: 'openai'                                # OpenAI-compatible API
+    primary_timeout: 30.0   # Timeout for primary endpoint (seconds)
+
+    # Fallback Ollama settings (local Jetson)
+    fallback_ollama_host: 'http://localhost:11434'
+    fallback_ollama_model: 'granite4:latest'                # Local text fallback (lighter)
+    fallback_ollama_vision_model: 'granite3.2-vision:latest'  # Lighter Jetson vision VLM
+
+    # Secondary remote LLM for conversation (text-only)
+    secondary_ollama_host: 'http://192.168.2.16:8000'   # Same Cosmos server
+    secondary_ollama_model: 'nvidia/Cosmos-Reason2-8B'
+    secondary_api_type: 'openai'
+
+    # Legacy Ollama settings (for backwards compatibility)
+    ollama_host: 'http://localhost:11434'
+    ollama_model: 'granite4:latest'
+    ollama_vision_model: 'granite3.2-vision:latest'
+
+    # Conversation settings
+    context_memory_size: 5  # Remember last N exchanges
+
+    # Motion settings
+    linear_speed: 0.25      # m/s
+    angular_speed: 0.8      # rad/s
+    command_timeout: 5.0    # Auto-stop after N seconds
+    
+audio_capture_node:
+  ros__parameters:
+    # Audio settings
+    sample_rate: 16000
+    
+    # Wake word settings
+    wake_word: 'hello'
+    enable_wake_word: true
+    awake_duration: 15.0    # Stay awake for N seconds
+    
+    # VAD settings
+    vad_aggressiveness: 2   # 0-3, higher = more aggressive
+    max_recording_duration: 10.0
+    # Barge-in settings
+    barge_in_enabled: false               # DISABLED - too sensitive, false triggers
+    barge_in_required_frames: 10          # Very high threshold if re-enabled
+    barge_in_reset_silence: 20
+    barge_in_adaptive_enabled: false      # Adaptive mode disabled
+    barge_in_adaptive_delay: 15.0
+    barge_in_adaptive_min_frames: 8
+    barge_in_explicit_commands: true      # Keep explicit "stop" commands only
+
+    # Whisper settings
+    whisper_model: 'tiny.en'  # Options: tiny.en, base.en, small.en
+    
+tts_node:
+  ros__parameters:
+    # TTS settings
+    enable_tts: true
+    speech_rate: 1.0        # 0.5-2.0, 1.0 = normal speed
+    
+    # Magpie TTS (primary, high quality)
+    prefer_magpie: true
+    magpie_script: '/home/gildas01/python-clients/scripts/tts/talk.py'
+    magpie_voice: 'Magpie-Multilingual.EN-US.Aria'
+    magpie_language_code: 'en-US'
+    magpie_token: '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'
+    
+    # Piper TTS (fallback, offline)
+    piper_bin: '/home/gildas01/piper_wrapper.sh'
+    piper_model: '/home/gildas01/en_US-lessac-medium.onnx'

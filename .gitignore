@@ -1,0 +1,71 @@
+# ROS2 Build Artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+*.pyc
+__pycache__/
+
+# Model Files (too large for git)
+models/onnx/*.onnx
+models/onnx/*.pt
+models/onnx/*.pth
+models/onnx/*.gguf
+*.onnx
+*.pt
+*.pth
+*.gguf
+
+# Python
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+*.key
+*.pem
+
+# Logs
+*.log
+log/
+logs/
+
+# Data
+data/
+dataset/
+training_data/
+*.bag
+*.db3
+
+# Temp Files
+tmp/
+temp/
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Swap files
+*.swp
+swapfile
+
+# API Keys and Tokens
+*_token.txt
+*_key.txt
+secrets/
+credentials.json

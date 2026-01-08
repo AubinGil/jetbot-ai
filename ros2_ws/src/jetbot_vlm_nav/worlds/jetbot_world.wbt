@@ -1,0 +1,93 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/nvidia/jetbot/protos/JetBot.proto"
+
+WorldInfo {
+  info [
+    "Jetbot VLM Navigation Simulation"
+  ]
+  title "Jetbot VLM Nav"
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.3527265321748586 0.3527265321748586 0.866699479058224 1.7
+  position 0.4614460700971326 -3.889398609341385 3.509159667071536
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 4 4
+  floorTileSize 1 1
+}
+DEF BOX1 Solid {
+  translation 0.5 0.5 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.2 0.2 0.1
+  }
+}
+DEF BOX2 Solid {
+  translation -0.5 0.8 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.2 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.3 0.2 0.1
+  }
+}
+DEF CYLINDER1 Solid {
+  translation 0 1.2 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.5
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.2
+        radius 0.15
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 0.2
+    radius 0.15
+  }
+}
+JetBot {
+  hidden position_0_0 0.44796165897774415
+  hidden position_0_1 0.44796165760219203
+  hidden translation_6 0.030000237528161673 0.0521500000157608 0.030000478481492857
+  hidden rotation_6 0.21682867118619467 0.21682787269900688 0.951825089484645 1.6201539372557365
+  hidden translation_7 0.030000240350907443 -0.05949999998422251 0.03000048424798114
+  hidden rotation_7 0.216828633075458 0.2168286324918545 0.9518249250835686 1.620150434242649
+  translation 7.498663898795194e-06 6.996971985399712e-08 -0.0002007557636595353
+  rotation 0.0038638261478324805 -0.9999920612119348 0.0009738380795907535 0.0013875233925258338
+  controller "jetbot_ros2_controller"
+}
