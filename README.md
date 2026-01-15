@@ -1,3 +1,8 @@
+
+<img width="1024" height="1536" alt="642497b0-943b-4307-8f24-38b6598c33a3" src="https://github.com/user-attachments/assets/ea923781-ba2e-4293-8b84-da4ffced13db" />
+
+
+
 # JetBot AI - Advanced Autonomous Robot Platform
 
 An intelligent mobile robot platform combining vision-language models, autonomous navigation, and natural voice interaction on NVIDIA Jetson.
