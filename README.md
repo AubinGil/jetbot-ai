@@ -172,6 +172,8 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 
 [Aubin Gil](https://github.com/AubinGil)
 
+https://youtube.com/shorts/kusgxY-Qtwg?feature=share
+
 ---
 
 **Status**: Active Development | **Platform**: Jetson Orin Nano | **ROS**: Humble
