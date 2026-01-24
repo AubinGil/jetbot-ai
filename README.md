@@ -154,6 +154,11 @@ export OLLAMA_REMOTE_HOST=http://192.168.2.29:11434
 export CONVERSATION_LANGUAGE=en  # or 'fr' for French
 ```
 
+## Multimedia
+https://youtube.com/shorts/kusgxY-Qtwg?feature=share)
+[ ](https://youtube.com/shorts/kusgxY-Qtwg?feature=share)
+
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit issues or pull requests.
@@ -172,7 +177,7 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 
 [Aubin Gil](https://github.com/AubinGil)
 
-https://youtube.com/shorts/kusgxY-Qtwg?feature=share
+
 
 ---
 
