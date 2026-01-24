@@ -156,8 +156,7 @@ export CONVERSATION_LANGUAGE=en  # or 'fr' for French
 
 ## Multimedia
 https://youtube.com/shorts/kusgxY-Qtwg?feature=share)
-[ ](https://youtube.com/shorts/kusgxY-Qtwg?feature=share)
-[](https://youtube.com/shorts/-vseliA40CI?feature=share)
+https://youtube.com/shorts/-vseliA40CI?feature=share)
 
 ## Contributing
 
